@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>health bar</title>
+    </head>
+    <body>
+        <label for="HP">HP:</label>
+        <meter id="HP"
+            min="0" max="100"
+            low="33" high="66" optimum="80"
+            value="100">
+        </meter>
+        <input type="button" value="Attack" id="button">
+        <h1>..</h1>
+
+        <script>
+            document.getElementById("button").addEventListener("click",(e)=>{
+                let HP = document.getElementById("HP")
+                HP.value -= 10;
+                if (HP < 1) text = " you dead";
+
+
+
+            });
+        </script>
+    </body>
+</html>
