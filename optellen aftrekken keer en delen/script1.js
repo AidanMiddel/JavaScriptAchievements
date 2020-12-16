@@ -29,9 +29,16 @@
         vermenigvuldigen.innerHTML = antwoord; // schrijf naar HTML
     } 
     function doedelen(getal1, getal2){
-        let antwoord = getal1 / getal2;// doe de bewerking
-        console.log("delen " + antwoord); // laat ook in de console zien
-        delen.innerHTML = antwoord; // schrijf naar HTML
+         // schrijf naar HTML
+        if (getal2 == 0){
+            alert("delen door nul mag niet")
+        }
+        else{
+            let antwoord = getal1 / getal2;// doe de bewerking
+            console.log("delen " + antwoord); // laat ook in de console zien
+            delen.innerHTML = antwoord;
+        }
+
     }
     function doeaftrekken(getal1, getal2){
         let antwoord = getal1 - getal2;// doe de bewerking
