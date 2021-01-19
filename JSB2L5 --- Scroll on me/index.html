@@ -6,13 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="scroll">hi!</p>
-    <input type="button" value="scroll" id="button">
+    <p id="scroll">scroll go brr</p>
     <script> 
-    document.getElementById("button").addEventListener("click",(e)=>{
-    let scroll = document.getElementById("scroll")
-    document.getElementById("scroll").textContent += "!";
-    })
+    let titleElement = document.getElementById("scroll");
+    titleElement.addEventListener("wheel", ()=>
+    {titleElement.innerHTML += "r";});
+
+    titleElement.addEventListener("click", ()=>
+    {titleElement.innerHTML = "scroll go b"});
     </script>
 </body>
 </html>
