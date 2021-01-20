@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dnd</title>
+</head>
+<body>
+    <h1>dobbelstenen dnd</h1>
+    <p>klink hieronder om te beginnen</p>
+    <button id="button" onClick="rollingForStats()">Roll</button>
+    <br>
+    <p>Getallen zijn:</p>
+    <p id="dobbelsteen1">..</p>
+    <p id="dobbelsteen2">..</p>
+    <p id="dobbelsteen3">..</p>
+    <p id="dobbelsteen4">.. </p>
+    <br>
+    <p>De drie hoogste bij elkaar opgeteld zijn:</p>
+    <p id="hoogstegooibijelkaar">..</p>
+
+
+    
+    <script>
+        function rollingForStats(){
+            var roll1 = Math.floor(Math.random() * 6) + 1;
+            var roll2 = Math.floor(Math.random() * 6) + 1;
+            var roll3 = Math.floor(Math.random() * 6) + 1;
+            var roll4 = Math.floor(Math.random() * 6) + 1;
+
+            var dobbelstenen = [roll1, roll2, roll3, roll4]
+            
+            console.log(dobbelstenen);   
+
+            var laagsteroll = Math.min.apply(Math, dobbelstenen);
+
+            var resultaat = roll1 + roll2 + roll3 + roll4 - laagsteroll;
+
+            document.getElementById("dobbelsteen1").innerHTML = roll1;
+            document.getElementById("dobbelsteen2").innerHTML = roll2;
+            document.getElementById("dobbelsteen3").innerHTML = roll3;
+            document.getElementById("dobbelsteen4").innerHTML = roll4;
+            document.getElementById("hoogstegooibijelkaar").innerHTML = resultaat;
+        }
+    </script>
+</body>
+</html>
